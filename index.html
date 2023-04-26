@@ -3,18 +3,25 @@
     <head>
         <meta charset="UTF-8" />
         <title>Hello World!</title>
-        <link rel='stylesheet' href='./luckysheet/plugins/css/pluginsCss.css' />
+        <link rel='stylesheet' href='./plugins/css/pluginsCss.css' />
+        <link rel='stylesheet' href='./plugins/plugins.css' />
+        <link rel='stylesheet' href='./css/luckysheet.css' />
+        <link rel='stylesheet' href='./assets/iconfont/iconfont.css' />
+        <script src="./plugins/js/plugin.js"></script>
+        <script src="./luckysheet.umd.js"></script>
+        <!-- <link rel='stylesheet' href='./luckysheet/plugins/css/pluginsCss.css' />
         <link rel='stylesheet' href='./luckysheet/plugins/plugins.css' />
         <link rel='stylesheet' href='./luckysheet/css/luckysheet.css' />
         <link rel='stylesheet' href='./luckysheet/assets/iconfont/iconfont.css' />
         <script src="./luckysheet/plugins/js/plugin.js"></script>
-        <script src="./luckysheet/luckysheet.umd.js"></script>
+        <script src="./luckysheet/luckysheet.umd.js"></script> -->
         <script>
             $(function () {
                 //Configuration item
                 var options = {
                     container: 'luckysheet', //luckysheet is the container id
                     showinfobar:false,
+                    plugins:['chart']
                 }
                 luckysheet.create(options)
             });
@@ -73,7 +80,8 @@
                                     showinfobar:false,
                                     data:exportJson.sheets,
                                     title:exportJson.info.name,
-                                    userInfo:exportJson.info.name.creator
+                                    userInfo:exportJson.info.name.creator,
+                                    plugins:['chart']
                                 });
                             });
                         });
@@ -102,7 +110,8 @@
                                     showinfobar:false,
                                     data:exportJson.sheets,
                                     title:exportJson.info.name,
-                                    userInfo:exportJson.info.name.creator
+                                    userInfo:exportJson.info.name.creator,
+                                    plugins:['chart']
                                 });
                             });
                         });
